@@ -40,7 +40,7 @@ print("Измененный текст:", new_text)
 import re
 
 # Пример 1: Поиск всех слов в тексте
-text = "Hello, my name is John."
+```text = "Hello, my name is John."
 pattern = r"\b\w+\b"  # Шаблон для поиска слов (слово состоит из одного или более символов \w)
 
 matches = re.findall(pattern, text)
@@ -70,3 +70,4 @@ if is_valid:
 else:
     print("Адрес электронной почты невалиден.")
 
+```
