@@ -37,3 +37,36 @@ print("Измененный текст:", new_text)
 ```
 
 В этом примере мы используем регулярное выражение для поиска адреса электронной почты в строке `text`. Затем мы используем `re.sub()` для замены найденного адреса на слово "EMAIL".
+import re
+
+# Пример 1: Поиск всех слов в тексте
+text = "Hello, my name is John."
+pattern = r"\b\w+\b"  # Шаблон для поиска слов (слово состоит из одного или более символов \w)
+
+matches = re.findall(pattern, text)
+print(matches)  # Результат: ['Hello', 'my', 'name', 'is', 'John']
+
+# Пример 2: Поиск всех чисел в строке
+text = "The price is $20.99."
+pattern = r"\d+\.\d{2}"  # Шаблон для поиска чисел (число состоит из одного или более цифр \d, за которыми следует точка и две цифры)
+
+matches = re.findall(pattern, text)
+print(matches)  # Результат: ['20.99']
+
+# Пример 3: Замена слова в тексте
+text = "I love apples."
+pattern = r"apples"  # Шаблон для поиска слова "apples"
+
+new_text = re.sub(pattern, "oranges", text)
+print(new_text)  # Результат: "I love oranges."
+
+# Пример 4: Проверка валидности адреса электронной почты
+email = "john@example.com"
+pattern = r"\b[\w.-]+@[\w.-]+\.\w+\b"  # Шаблон для проверки адреса электронной почты
+
+is_valid = re.match(pattern, email)
+if is_valid:
+    print("Адрес электронной почты валиден.")
+else:
+    print("Адрес электронной почты невалиден.")
+
