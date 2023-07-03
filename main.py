@@ -1,5 +1,5 @@
-import re
 
+import re
 # Исходный текст
 text = """Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae fringilla ex. Nullam consectetur sem 
 vitae nulla lacinia, sed auctor urna volutpat. Quisque sollicitudin ipsum a neque consectetur, non pellentesque 
@@ -28,3 +28,4 @@ convallis. Vestibulum faucibus pharetra bibendum. Sed nec congue justo. Curabitu
 a, condimentum ligula. Sed varius euismod magna, vel vulputate justo aliquet a. Morbi eget felis at est posuere 
 rutrum. Nam tincidunt semper quam, sed pulvinar nulla fermentum a."""
 print(text)
+
