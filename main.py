@@ -26,7 +26,7 @@ Suspendisse dignissim malesuada est, at tristique velit eleifend at. Aliquam ult
 Donec ultrices mauris at nisi faucibus, id aliquam velit tempor. Nullam id leo nulla. Sed pharetra interdum tortor id 
 convallis. Vestibulum faucibus pharetra bibendum. Sed nec congue justo. Curabitur id ipsum volutpat, hendrerit erat 
 a, condimentum ligula. Sed varius euismod magna, vel vulputate justo aliquet a. Morbi eget felis at est posuere 
-rutrum. Nam tincidunt semper quam, sed pulvinar nulla fermentum a."""
+rutrum. Nam tincidunt semper quam, sed pulvinar nulla fermentum a?"""
 # print(text)
 
 # Задание 1: Найти все слова, начинающиеся с буквы "c".
@@ -54,8 +54,11 @@ print (re.findall(pattern5, text))
 pattern6 = r"\bmalesuada\b"
 print (re.sub(pattern6, "lorem", text))
 # Задание 8: Найти все предложения, в которых есть как минимум два слова, начинающихся с буквы "a".
-
+pattern9 = r"\b[A-Z](?:[^.?!]*\b[Aa]\w+){2,}[^.?!]*[.?!]"
+print (re.findall(pattern9, text),sep="\n")
 # Задание 9: Найти все предложения, заканчивающиеся вопросительным знаком.
-
+pattern7 = r"[A-Z]*\b\b[^.?!]*[?]"
+print (re.findall(pattern7, text))
 # Задание 10: Найти все слова, содержащие только буквы "a", "e", "i", "o", "u".
-
+pattern8 =  r"\b[AaEeIiOoUu]+\b"
+print (re.findall(pattern8, text))
